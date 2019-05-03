@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/scrollView1" >
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/linearLayout1" >
+			<fragment
+				class="CABASUS.Fragments.fragment_caballos_actividades"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:id="@+id/frameLayout_activities_caballos" />
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="4px"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp"
+				android:layout_marginBottom="10dp"
+				android:background="#000" />
+			<fragment
+				class="CABASUS.Fragments.fragment_lista_actividades"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/frameLayout_activities_lista_caballos" />
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

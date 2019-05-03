@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:gravity="center">
+	<ImageView
+		android:src="@android:drawable/ic_menu_gallery"
+		android:layout_width="300dp"
+		android:layout_height="300dp"
+		android:id="@+id/imgCaballo" />
+	<TextView
+		android:text="Nombre"
+		android:textSize="30dp"
+		android:textColor="#000"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_marginTop="20dp"
+		android:textAlignment="center"
+		android:id="@+id/txtNombre" />
+
+</LinearLayout>

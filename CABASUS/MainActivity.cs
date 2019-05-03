@@ -1,14 +1,11 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
-using Android.Runtime;
 using Android.Widget;
 using Android.Support.Design.Widget;
 using Android.Views;
 using Android.Support.V4.Widget;
 using Android.Support.V4.View;
-using CABASUS.Clases;
-using CABASUS.Fragments;
 using CABASUS.Fragments;
 
 namespace CABASUS
@@ -20,6 +17,7 @@ namespace CABASUS
         internal static readonly int NOTIFICATION_ID = 100;
         FragmentTransaction transaccion;
         Fragment_perfil fragment_perfil = new Fragment_perfil();
+        Fragment_Actividades fragment_actividades = new Fragment_Actividades();
         Fragment_Ajustes fragment_ajustes = new Fragment_Ajustes();
         Fragment_Salud fragment_salud = new Fragment_Salud();
         Fragment_Chat fragment_Chat = new Fragment_Chat();
@@ -36,7 +34,10 @@ namespace CABASUS
             }
             else if (id == Resource.Id.nav_activities)
             {
-
+                transaccion = FragmentManager.BeginTransaction();
+                transaccion.Add(Resource.Id.FrameContent, fragment_actividades, "Actividades");
+                transaccion.Show(fragment_actividades);
+                transaccion.Commit();
             }
             else if (id == Resource.Id.nav_calendar)
             {
