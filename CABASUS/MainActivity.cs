@@ -28,15 +28,23 @@ namespace CABASUS
             if (id == Resource.Id.nav_profile)
             {
                 transaccion = FragmentManager.BeginTransaction();
-                transaccion.Add(Resource.Id.FrameContent, fragment_perfil, "Perfil");
+                transaccion.Hide(fragment_salud);
+                transaccion.Hide(fragment_ajustes);
+                transaccion.Hide(fragment_Chat);
+                transaccion.Hide(fragment_actividades);
+                transaccion.Hide(_Fragment_Caballos);
                 transaccion.Show(fragment_perfil);
                 transaccion.Commit();
             }
             else if (id == Resource.Id.nav_activities)
             {
                 transaccion = FragmentManager.BeginTransaction();
-                transaccion.Add(Resource.Id.FrameContent, fragment_actividades, "Actividades");
+                transaccion.Hide(fragment_salud);
+                transaccion.Hide(fragment_ajustes);
+                transaccion.Hide(fragment_Chat);
                 transaccion.Show(fragment_actividades);
+                transaccion.Hide(_Fragment_Caballos);
+                transaccion.Hide(fragment_perfil);
                 transaccion.Commit();
             }
             else if (id == Resource.Id.nav_calendar)
@@ -45,28 +53,45 @@ namespace CABASUS
             else if (id == Resource.Id.nav_chat)
             {
                 transaccion = FragmentManager.BeginTransaction();
-                transaccion.Add(Resource.Id.FrameContent, fragment_Chat, "Chat");
+                transaccion.Hide(fragment_salud);
+                transaccion.Hide(fragment_ajustes);
                 transaccion.Show(fragment_Chat);
+                transaccion.Hide(fragment_actividades);
+                transaccion.Hide(_Fragment_Caballos);
+                transaccion.Hide(fragment_perfil);
                 transaccion.Commit();
             }
             else if (id == Resource.Id.nav_settings)
             {
                 transaccion = FragmentManager.BeginTransaction();
-                transaccion.Add(Resource.Id.FrameContent, fragment_ajustes, "Ajustes");
+                transaccion.Hide(fragment_salud);
                 transaccion.Show(fragment_ajustes);
+                transaccion.Hide(fragment_Chat);
+                transaccion.Hide(fragment_actividades);
+                transaccion.Hide(_Fragment_Caballos);
+                transaccion.Hide(fragment_perfil);
                 transaccion.Commit();
             }
             else if (id == Resource.Id.nav_horses)
             {
                 transaccion = FragmentManager.BeginTransaction();
+                transaccion.Hide(fragment_salud);
+                transaccion.Hide(fragment_ajustes);
+                transaccion.Hide(fragment_Chat);
+                transaccion.Hide(fragment_actividades);
                 transaccion.Show(_Fragment_Caballos);
+                transaccion.Hide(fragment_perfil);
                 transaccion.Commit();
             }
             else if (id==Resource.Id.nav_health)
             {
                 transaccion = FragmentManager.BeginTransaction();
-                transaccion.Add(Resource.Id.FrameContent, fragment_salud, "Salud");
                 transaccion.Show(fragment_salud);
+                transaccion.Hide(fragment_ajustes);
+                transaccion.Hide(fragment_Chat);
+                transaccion.Hide(fragment_actividades);
+                transaccion.Hide(_Fragment_Caballos);
+                transaccion.Hide(fragment_perfil);
                 transaccion.Commit();
             }
 
@@ -95,6 +120,16 @@ namespace CABASUS
 
             transaccion = FragmentManager.BeginTransaction();
             transaccion.Add(Resource.Id.FrameContent, _Fragment_Caballos, "Horses");
+            transaccion.Add(Resource.Id.FrameContent, fragment_perfil, "Perfil");
+            transaccion.Add(Resource.Id.FrameContent, fragment_actividades, "Actividades");
+            transaccion.Add(Resource.Id.FrameContent, fragment_Chat, "Chat");
+            transaccion.Add(Resource.Id.FrameContent, fragment_ajustes, "Ajustes");
+            transaccion.Add(Resource.Id.FrameContent, fragment_salud, "Salud");
+            transaccion.Hide(fragment_salud);
+            transaccion.Hide(fragment_ajustes);
+            transaccion.Hide(fragment_Chat);
+            transaccion.Show(fragment_actividades);
+            transaccion.Hide(fragment_perfil);
             transaccion.Hide(_Fragment_Caballos);
             transaccion.Commit();
             var headerView = navigationView.GetHeaderView(0);
