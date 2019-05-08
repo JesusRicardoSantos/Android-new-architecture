@@ -29,8 +29,8 @@ namespace CABASUS.Fragments
             var nombre = Vista.FindViewById<TextView>(Resource.Id.txtusername);
             var btnfriends = Vista.FindViewById<TextView>(Resource.Id.btnfriends);
             var btnhorses = Vista.FindViewById<TextView>(Resource.Id.btnhorses);
-            email.Text = new ShareInside().Consultar_DatosUsuario().email;
-            nombre.Text= new ShareInside().Consultar_DatosUsuario().nombre;
+            //email.Text = new ShareInside().Consultar_DatosUsuario().email;
+            //nombre.Text= new ShareInside().Consultar_DatosUsuario().nombre;
             btnfriends.Click += delegate 
             {
               Activity.StartActivity(typeof(Friends_List));

@@ -20,17 +20,17 @@ namespace CABASUS.Fragments
 
             //agregar fecha al primero eliminar esto cuando la logica sea la chida
             var primero = true;
-            TextView txtFecha = new TextView(Context);
+            //TextView txtFecha = new TextView(Context);
             var LayoutParameters = new LinearLayout.LayoutParams(-1, ViewGroup.LayoutParams.WrapContent);
             LayoutParameters.SetMargins(0, 20, 0, 20);
-            txtFecha.LayoutParameters = LayoutParameters;
-            txtFecha.Text = DateTime.Now.ToString("dd MMMM yyyy");
-            txtFecha.TextAlignment = TextAlignment.Center;
-            txtFecha.SetTextColor(Color.Black);
-            txtFecha.TextSize = 22;
-            txtFecha.SetTypeface(null, TypefaceStyle.Italic);
+            //txtFecha.LayoutParameters = LayoutParameters;
+            //txtFecha.Text = DateTime.Now.ToString("dd MMMM yyyy");
+            //txtFecha.TextAlignment = TextAlignment.Center;
+            //txtFecha.SetTextColor(Color.Black);
+            //txtFecha.TextSize = 22;
+            //txtFecha.SetTypeface(null, TypefaceStyle.Italic);
 
-            Vista.FindViewById<LinearLayout>(Resource.Id.listaActividades).AddView(txtFecha);
+            //Vista.FindViewById<LinearLayout>(Resource.Id.listaActividades).AddView(txtFecha);
 
             for (int i = 0; i < 20; i++)
             {
@@ -39,17 +39,17 @@ namespace CABASUS.Fragments
 
                 if (r.Next(0, 10) >= 5 && !primero)
                 {
-                    txtFecha = new TextView(Context);
+                    //txtFecha = new TextView(Context);
                     LayoutParameters = new LinearLayout.LayoutParams(-1, ViewGroup.LayoutParams.WrapContent);
                     LayoutParameters.SetMargins(0, 20, 0, 20);
-                    txtFecha.LayoutParameters = LayoutParameters;
-                    txtFecha.Text = DateTime.Now.AddDays(i).ToString("dd MMMM yyyy");
-                    txtFecha.TextAlignment = TextAlignment.Center;
-                    txtFecha.SetTextColor(Color.Black);
-                    txtFecha.TextSize = 22;
-                    txtFecha.SetTypeface(null, TypefaceStyle.Italic);
+                    //txtFecha.LayoutParameters = LayoutParameters;
+                    //txtFecha.Text = DateTime.Now.AddDays(i).ToString("dd MMMM yyyy");
+                    //txtFecha.TextAlignment = TextAlignment.Center;
+                    //txtFecha.SetTextColor(Color.Black);
+                    //txtFecha.TextSize = 22;
+                    //txtFecha.SetTypeface(null, TypefaceStyle.Italic);
 
-                    Vista.FindViewById<LinearLayout>(Resource.Id.listaActividades).AddView(txtFecha);
+                    //Vista.FindViewById<LinearLayout>(Resource.Id.listaActividades).AddView(txtFecha);
                 }
 
                 //vista con datos para cada actividad

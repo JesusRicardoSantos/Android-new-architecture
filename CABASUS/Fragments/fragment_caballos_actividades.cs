@@ -23,8 +23,8 @@ namespace CABASUS.Fragments
             imagenes.Add(Resource.Drawable.imagen3);
 
             var HICVP= Vista.FindViewById<HorizontalInfiniteCycleViewPager>(Resource.Id.selector_caballos_actividades);
-            Adaptadores.Adaptador_Selector_Caballos adaptador = new Adaptadores.Adaptador_Selector_Caballos(imagenes, Context);
-            HICVP.Adapter = adaptador;
+            //Adaptadores.Adaptador_Selector_Caballos adaptador = new Adaptadores.Adaptador_Selector_Caballos(imagenes, Context);
+            //HICVP.Adapter = adaptador;
             return Vista;
         }
     }

@@ -180,11 +180,18 @@ namespace CABASUS.Clases
 
         public usuarios Consultar_DatosUsuario()
         {
-            var serializador = new XmlSerializer(typeof(usuarios));
-            var Lectura = new StreamReader(System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "DatosUsuario.xml"));
-            var datos = (usuarios)serializador.Deserialize(Lectura);
-            Lectura.Close();
-            return datos;
+            try
+            {
+                //var serializador = new XmlSerializer(typeof(usuarios));
+                //var Lectura = new StreamReader(System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "DatosUsuario.xml"));
+                //var datos = (usuarios)serializador.Deserialize(Lectura);
+                //Lectura.Close();
+                //return datos;
+                return null;
+            }
+            catch (Error) {
+                return null;
+            }
         }
 
         public async Task<string> GenerarTokenFirebase()

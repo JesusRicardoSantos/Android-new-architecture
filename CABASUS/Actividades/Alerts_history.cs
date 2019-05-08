@@ -23,8 +23,12 @@ namespace CABASUS.Actividades
             SetContentView(Resource.Layout.layout_alerts);
             ListaAlertas = FindViewById<ListView>(Resource.Id.lst_alertas);
             List<usuarios> usuarios = new List<usuarios>();
-            usuarios.Add(new usuarios { id_usuario="1"});
-            usuarios.Add(new usuarios { id_usuario = "1" });
+
+            for (int i = 0; i < 10; i++)
+            {
+                usuarios.Add(new usuarios { id_usuario = "1" });
+            }
+
             ListaAlertas.Adapter = new Adaptadores.Adapter_AlertsHistory(this, usuarios);
         }
     }
